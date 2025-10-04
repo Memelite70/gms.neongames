@@ -1,3 +1,24 @@
+const firebaseConfig = {
+  apiKey: "AIzaSyCM-3YJTXH3bV7CeXZ7Z3Vvbxi9RAxTi2w",
+  authDomain: "obsidian-games.firebaseapp.com",
+  projectId: "obsidian-games",
+  storageBucket: "obsidian-games.firebasestorage.app",
+  messagingSenderId: "773826525877",
+  appId: "1:773826525877:web:a3a1fb8f87a10567ac1cfc",
+  measurementId: "G-ZE23DV3Y6R"
+};
+if(firebaseConfig ){
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { window.dataLayer.push(arguments); }
+
+  window.gtag("config", firebaseConfig.measurementId, {
+    cookie_domain: window.location.hostname,
+    cookie_flags: "SameSite=None;Secure",
+  });
+  // Initialize Firebase
+  const app = firebase.initializeApp(firebaseConfig);
+  //const auth = getAuth(app);
+}
 function unityFramework(Module) {
     var Module = typeof Module !== "undefined" ? Module : {};
     Module["USER_JSPRE_PLACEHOLDER"] = "USER_JSPRE_PLACEHOLDER";
